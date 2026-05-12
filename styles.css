@@ -1,0 +1,542 @@
+/* =========================================================
+   Academic site — shared styles
+   Typography: Fraunces (display serif) + DM Sans (body)
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=DM+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #fafaf7;
+  --bg-alt: #f2efe8;
+  --text: #1a1a18;
+  --text-muted: #5c5c58;
+  --text-soft: #8a8a86;
+  --accent: #8c2f3a;
+  --accent-hover: #6e2530;
+  --border: #e6e3db;
+  --border-strong: #cfcbc1;
+  --max-width: 1080px;
+  --radius: 4px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16.5px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "cv11";
+}
+
+h1, h2, h3, h4, .display {
+  font-family: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  font-variation-settings: "opsz" 36, "SOFT" 30;
+}
+
+h1 { font-size: 2.6rem; }
+h2 { font-size: 1.7rem; margin-bottom: 1.2rem; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+
+a:hover { border-bottom-color: var(--accent); }
+
+p { margin-bottom: 1rem; }
+p:last-child { margin-bottom: 0; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* =====================  HEADER / NAV  ===================== */
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 1.6rem 0;
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+  background: rgba(250, 250, 247, 0.92);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  border-bottom: none;
+}
+
+.site-title:hover { color: var(--accent); border-bottom: none; }
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+  padding: 0.25rem 0;
+  border-bottom: none;
+}
+
+.nav-links a:hover { color: var(--accent); border-bottom: none; }
+
+.nav-links a.active {
+  color: var(--text);
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+}
+
+/* =====================  HERO (home page)  ===================== */
+
+.hero {
+  padding: 4rem 0 3.5rem;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+  animation: fadeUp 0.7s ease-out;
+}
+
+.profile-photo {
+  width: 240px;
+  height: 240px;
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-soft);
+  font-style: italic;
+  font-size: 0.85rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.hero-text h1 {
+  margin-bottom: 0.4rem;
+}
+
+.title-line {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+
+.affiliation {
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.98rem;
+  margin-bottom: 1.6rem;
+}
+
+.bio p {
+  max-width: 62ch;
+  color: var(--text);
+}
+
+.contact-line {
+  margin-top: 1.8rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.contact-line a {
+  color: var(--text);
+  border-bottom: 1px solid var(--border-strong);
+}
+.contact-line a:hover { border-bottom-color: var(--accent); color: var(--accent); }
+
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.social-links a {
+  color: var(--text-muted);
+  border-bottom: none;
+}
+.social-links a:hover { color: var(--accent); }
+
+/* =====================  PAGE TITLES (non-home)  ===================== */
+
+.page-header {
+  padding: 3.5rem 0 2rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3rem;
+  animation: fadeUp 0.6s ease-out;
+}
+
+.page-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.page-header .lede {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 60ch;
+}
+
+/* =====================  SECTIONS  ===================== */
+
+section.block {
+  margin-bottom: 3.5rem;
+  animation: fadeUp 0.6s ease-out backwards;
+}
+section.block:nth-of-type(2) { animation-delay: 0.08s; }
+section.block:nth-of-type(3) { animation-delay: 0.16s; }
+section.block:nth-of-type(4) { animation-delay: 0.24s; }
+
+.section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-soft);
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* =====================  NEWS / UPDATES  ===================== */
+
+.news-list { list-style: none; }
+
+.news-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.5rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.97rem;
+}
+
+.news-date {
+  color: var(--text-soft);
+  font-feature-settings: "tnum";
+  font-size: 0.9rem;
+  padding-top: 0.1rem;
+}
+
+.news-text { color: var(--text); }
+
+/* =====================  PAPERS  ===================== */
+
+.paper {
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.paper:first-of-type { padding-top: 0.4rem; }
+.paper:last-of-type { border-bottom: none; }
+
+.paper-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.paper-meta {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.paper-meta .journal {
+  font-style: italic;
+}
+
+.paper-status {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  padding: 2px 8px;
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  margin-left: 0.5rem;
+  vertical-align: 2px;
+}
+
+.paper details {
+  margin-top: 0.5rem;
+}
+
+.paper summary {
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.3rem 0;
+  list-style: none;
+  user-select: none;
+  display: inline-block;
+}
+
+.paper summary::-webkit-details-marker { display: none; }
+
+.paper summary::before {
+  content: '▸';
+  display: inline-block;
+  margin-right: 0.4rem;
+  transition: transform 0.2s;
+  color: var(--text-soft);
+}
+
+.paper details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.paper summary:hover { color: var(--accent); }
+
+.paper-abstract {
+  margin-top: 0.6rem;
+  padding: 1rem 1.2rem;
+  background: var(--bg-alt);
+  border-left: 2px solid var(--accent);
+  font-size: 0.95rem;
+  color: var(--text);
+  max-width: 70ch;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.paper-links {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+}
+
+.paper-links a {
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.paper-links a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* =====================  COURSES  ===================== */
+
+.course {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 1.5rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.course:last-child { border-bottom: none; }
+
+.course-code {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.course-term {
+  color: var(--text-soft);
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+  font-feature-settings: "tnum";
+}
+
+.course-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.course-detail {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.course-links {
+  margin-top: 0.5rem;
+  font-size: 0.88rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* =====================  CV PAGE  ===================== */
+
+.cv-section { margin-bottom: 2.5rem; }
+
+.cv-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.5rem;
+  padding: 0.6rem 0;
+}
+
+.cv-date {
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  font-feature-settings: "tnum";
+  padding-top: 0.1rem;
+}
+
+.cv-content .item-title {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.cv-content .item-sub {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+}
+
+.cv-download {
+  display: inline-block;
+  margin: 1rem 0 2rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--text);
+  color: var(--bg);
+  border-radius: var(--radius);
+  font-size: 0.92rem;
+  font-weight: 500;
+  border-bottom: none;
+  transition: background 0.2s;
+}
+
+.cv-download:hover { background: var(--accent); border-bottom: none; }
+
+/* =====================  FOOTER  ===================== */
+
+footer {
+  margin-top: 5rem;
+  padding: 2.5rem 0 3rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-soft);
+  font-size: 0.88rem;
+}
+
+footer .footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+footer a { color: var(--text-muted); border-bottom: none; }
+footer a:hover { color: var(--accent); }
+
+/* =====================  PLACEHOLDER STYLING  ===================== */
+
+.placeholder {
+  background: rgba(140, 47, 58, 0.06);
+  border-left: 2px solid var(--accent);
+  padding: 0.1rem 0.3rem;
+  font-style: italic;
+  color: var(--accent-hover);
+}
+
+/* =====================  ANIMATIONS  ===================== */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================  RESPONSIVE  ===================== */
+
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.4rem; }
+
+  .container { padding: 0 1.3rem; }
+
+  .site-header { padding: 1.1rem 0; }
+  nav { gap: 0.6rem; }
+  .nav-links { gap: 1.2rem; font-size: 0.9rem; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    padding: 2.5rem 0 2rem;
+  }
+
+  .profile-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .news-item, .course, .cv-item {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .news-date, .course-term, .cv-date {
+    font-size: 0.82rem;
+  }
+
+  .page-header { padding: 2rem 0 1.4rem; margin-bottom: 2rem; }
+}

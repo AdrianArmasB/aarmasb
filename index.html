@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adrian Armas Braithwaite — Economist</title>
+  <meta name="description" content="Personal website of Adrian Armas Braithwaite, PhD Candidate in Economics at the University of Michigan. Macroeconomics, International Finance, and Trade.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav>
+        <a href="index.html" class="site-title">Adrian Armas Braithwaite</a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <div class="profile-photo">
+        <!-- To add your photo: save it as assets/photo.jpg and replace this div with:
+             <img src="assets/photo.jpg" alt="Adrian Armas Braithwaite"> -->
+        <div class="profile-placeholder">photo<br>(240×240px)</div>
+      </div>
+
+      <div class="hero-text">
+        <h1>Adrian Armas Braithwaite</h1>
+        <p class="title-line">PhD Candidate in Economics</p>
+        <p class="affiliation">University of Michigan · Department of Economics</p>
+
+        <div class="bio">
+          <p>
+            I am a third-year PhD candidate in Economics at the University of
+            Michigan. My research is in macroeconomics, international finance,
+            and trade, with a focus on emerging economies.
+          </p>
+          <p>
+            My current work studies the persistence of deposit dollarization
+            and how experience-based learning shapes currency portfolio
+            choices across generations; the macroeconomics of fertility and
+            long-run growth; and optimal foreign-exchange intervention under
+            segmented financial markets.
+          </p>
+          <p>
+            Before starting my PhD, I worked as a Research Analyst at the
+            Superintendence of Banks, Insurance Companies, and Private Pension
+            Funds in Lima, Peru. I hold M.Sc. degrees from CEMFI (Madrid) and
+            Universidad del Pacífico (Lima).
+          </p>
+        </div>
+
+        <p class="contact-line">
+          <a href="mailto:aarmasb@umich.edu">aarmasb@umich.edu</a>
+        </p>
+
+        <div class="social-links">
+          <!-- Update href values once you have these set up. Delete any rows you don't use. -->
+          <a href="#" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+          <a href="#" target="_blank" rel="noopener">SSRN</a>
+          <a href="#" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-label">News</h2>
+      <ul class="news-list">
+        <li class="news-item">
+          <span class="news-date">2025</span>
+          <span class="news-text">
+            Drafting third-year paper, <em>“Dollarization Hysteresis and
+            Expectation Formation,”</em> on experience-based learning and
+            deposit dollarization in Uruguay.
+          </span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2024–25</span>
+          <span class="news-text">
+            GSI for Money and Banking, University of Michigan.
+          </span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2023</span>
+          <span class="news-text">
+            Awarded an ASBANC research grant (US$15,000) for joint work with
+            Marco Ortiz on optimal FX intervention.
+          </span>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Adrian Armas Braithwaite</span>
+      <span><a href="mailto:aarmasb@umich.edu">aarmasb@umich.edu</a></span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
