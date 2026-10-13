@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adrian Armas Braithwaite — Economist</title>
-  <meta name="description" content="Personal website of Adrian Armas Braithwaite, PhD Candidate in Economics at the University of Michigan. Macroeconomics, International Finance, and Trade.">
+  <meta name="description" content="Personal website of Adrian Armas Braithwaite, PhD Candidate in Economics at the University of Michigan. Macroeconomics and International Finance.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,10 +14,10 @@
       <nav>
         <a href="index.html" class="site-title">Adrian Armas Braithwaite</a>
         <ul class="nav-links">
-          <li><a href="index.html" class="active">About</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="cv.html">CV</a></li>
+          <li><a href="index.html#about" class="active" data-section="about">About</a></li>
+          <li><a href="index.html#research" data-section="research">Research</a></li>
+          <li><a href="index.html#teaching" data-section="teaching">Teaching</a></li>
+          <li><a href="cv.html" data-section="cv">CV</a></li>
         </ul>
       </nav>
     </div>
@@ -25,7 +25,7 @@
 
   <main class="container">
 
-    <section class="hero">
+    <section class="hero" id="about">
       <div class="profile-photo">
         <!-- To add your photo: save it as assets/photo.jpg and replace this div with:
              <img src="assets/photo.jpg" alt="Adrian Armas Braithwaite"> -->
@@ -39,22 +39,27 @@
 
         <div class="bio">
           <p>
-            I am a third-year PhD candidate in Economics at the University of
-            Michigan. My research is in macroeconomics, international finance,
-            and trade, with a focus on emerging economies.
+            I am a fourth-year PhD candidate in Economics at the University of
+            Michigan. My research is in macroeconomics and international finance.
           </p>
           <p>
-            My current work studies the persistence of deposit dollarization
-            and how experience-based learning shapes currency portfolio
-            choices across generations; the macroeconomics of fertility and
-            long-run growth; and optimal foreign-exchange intervention under
-            segmented financial markets.
+            Much of my current work studies how the demographic composition of
+            the population shapes aggregate economic outcomes. In my third-year
+            paper, I show how experience-based expectations sustain deposit
+            dollarization, through belief updating within cohorts and through
+            changes in cohort composition. In my fourth-year paper, with Brian
+            Fujiy and Benjamin Glass, I study the optimal design of transfers
+            when population growth drives long-run growth and fertility has
+            fallen below replacement. In joint work with Marco Ortiz, I study
+            optimal foreign-exchange intervention when banks' portfolio and
+            liquidity frictions generate endogenous deviations from covered and
+            uncovered interest parity.
           </p>
           <p>
             Before starting my PhD, I worked as a Research Analyst at the
             Superintendence of Banks, Insurance Companies, and Private Pension
-            Funds in Lima, Peru. I hold M.Sc. degrees from CEMFI (Madrid) and
-            Universidad del Pacífico (Lima).
+            Funds (SBS), Peru's financial supervisor. I hold M.Sc. degrees from
+            CEMFI (Madrid) and Universidad del Pacífico (Lima).
           </p>
         </div>
 
@@ -63,41 +68,376 @@
         </p>
 
         <div class="social-links">
-          <!-- Update href values once you have these set up. Delete any rows you don't use. -->
-          <a href="#" target="_blank" rel="noopener">Google Scholar</a>
           <a href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
-          <a href="#" target="_blank" rel="noopener">SSRN</a>
-          <a href="#" target="_blank" rel="noopener">GitHub</a>
-          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section" id="research">
+      <div class="home-section-header">
+        <h2>Research</h2>
+        <p class="lede">
+        I work on macroeconomics and international finance: how households form
+        expectations, how demographics shape aggregate outcomes, and how
+        financial frictions shape exchange-rate policy in emerging economies.
+        </p>
+      </div>
+
+    <section class="block">
+      <h2 class="section-label">Working Papers</h2>
+      <article class="paper">
+        <h3 class="paper-title">
+          Dollarization Persistence and Expectation Formation
+          <span class="paper-status">In progress</span>
+        </h3>
+        <p class="paper-meta">Third-year paper · 2026</p>
+        <details>
+          <summary>Abstract</summary>
+          <div class="paper-abstract">
+            Deposit dollarization persists after inflation has stabilized. This
+            paper asks to what extent this persistence reflects expectations
+            formed through past experiences. Building on the experience-based
+            learning framework of Malmendier and Nagel (2011, 2016), I argue
+            that heterogeneous lifetime inflation and depreciation experiences
+            across birth cohorts generate differences in beliefs about future
+            depreciation and, therefore, in deposit dollarization. Using three
+            waves of Uruguayan household financial surveys, I document that
+            individuals with higher lifetime depreciation experience hold a
+            larger share of their deposits in foreign currency. I then embed
+            experience-based learning in an overlapping-generations model with
+            incomplete markets and endogenous currency portfolio choice,
+            disciplined by the household-level estimates, and compare its
+            predictions with the aggregate Uruguayan deposit dollarization
+            series. The model highlights cohort replacement as a quantitatively
+            important margin of aggregate de-dollarization, complementing
+            within-cohort belief updating.
+          </div>
+        </details>
+        <p class="paper-meta paper-presented">
+          <strong>Presented at:</strong>
+          Encuentro de Economistas 2026, Central Reserve Bank of Peru ·
+          H2D2 Seminar, University of Michigan (2026) ·
+          21st Economics Graduate Student Conference, Washington University in
+          St. Louis (2026)
+        </p>
+        <p class="paper-meta paper-presented">
+          <strong>Upcoming:</strong>
+          CEPR International Macroeconomics and Finance Programme Meeting
+          (November 2–3, 2026) · International Macro Lunch, University of
+          Michigan (November 6, 2026)
+        </p>
+        <div class="paper-links">
+          <!-- <a href="papers/dollarization.pdf">PDF</a> -->
+        </div>
+      </article>
+
+      <article class="paper">
+        <h3 class="paper-title">
+          Fertility Free-Riding and Optimal Transfers
+          <span class="paper-status">In progress</span>
+        </h3>
+        <p class="paper-meta">
+          with <a href="https://bcfujiy.github.io/" target="_blank" rel="noopener">Brian C. Fujiy</a>
+          and <a href="https://sites.google.com/view/benjamin-glass/home" target="_blank" rel="noopener">Benjamin Glass</a>
+          · Fourth-year paper · 2026
+        </p>
+        <details>
+          <summary>Abstract</summary>
+          <div class="paper-abstract">
+            U.S. fertility has declined for decades, threatening long-run
+            economic growth. This paper identifies a fertility free-riding
+            problem: additional births generate positive externalities for
+            society, but individual families bear all the costs and society
+            does not capture the full social value. We develop an optimal
+            transfer system by embedding a semi-endogenous growth model into an
+            overlapping-generations framework with endogenous fertility,
+            capturing both the intensive margin (number of children) and the
+            extensive margin (share of families with children). Using American
+            Community Survey data, we evaluate whether fertility is
+            inefficiently low and the effects of optimal transfers on U.S.
+            fertility rates and long-run growth.
+          </div>
+        </details>
+        <p class="paper-meta paper-presented">
+          <strong>Presented at:</strong>
+          Doctoral Symposium, Hong Kong Baptist University (2026)
+        </p>
+      </article>
+
+      <article class="paper">
+        <h3 class="paper-title">
+          Exchange Rate Determination and Optimal FXI Policy: The Role of
+          Portfolio and Liquidity Shocks
+          <span class="paper-status">New version in progress</span>
+        </h3>
+        <p class="paper-meta">
+          with <a href="https://sites.google.com/view/marcoeconomics/main-page?authuser=0" target="_blank" rel="noopener">Marco Ortiz</a>
+          <span class="journal"> · Earlier version in the SBS Peru Working Paper Series</span>
+        </p>
+        <details>
+          <summary>Abstract</summary>
+          <div class="paper-abstract">
+            We develop a model in which banks intermediate capital flows in
+            segmented foreign exchange markets while managing liquidity risk
+            through frictional interbank markets. The interaction of portfolio
+            and liquidity channels generates joint deviations from both
+            uncovered and covered interest rate parity (UIP and CIP). We
+            establish three analytical results: first, settlement frictions
+            create endogenous liquidity premia that drive a wedge between
+            lending, deposit, and reserve rates in each currency; second, the
+            modified UIP condition decomposes into a risk premium—reflecting
+            banks' limited capacity to absorb exchange rate risk—and a
+            liquidity premium—reflecting the relative scarcity of reserves
+            across currencies; third, CIP deviations arise exclusively from
+            liquidity frictions, not from portfolio imbalances. We embed this
+            financial sector in a small open economy general equilibrium model
+            and characterize optimal foreign exchange intervention (FXI)
+            policy. Spot interventions affect both the liquidity and portfolio
+            margins, whereas interventions through non-deliverable forwards
+            operate only through the portfolio channel. The optimal instrument
+            mix depends on the nature of the underlying shock, providing a
+            rationale for the diverse FXI strategies observed across emerging
+            market central banks.
+          </div>
+        </details>
+        <p class="paper-meta paper-presented">
+          <strong>Presented at:</strong>
+          Central Reserve Bank of Peru Research Seminar and Annual Meeting
+          (2022) · 23rd INFER Annual Conference (2022) · LACEA-LAMES (Lima,
+          2022) · Money, Macro and Finance Society Annual Meeting (2022) ·
+          Pontificia Universidad Católica del Perú Seminar (2022) · CIDE
+          Research Seminar · Department of Economics Seminar, Universidad de
+          Chile
+        </p>
+      </article>
+    </section>
+
+    <section class="block">
+      <h2 class="section-label">Earlier Work</h2>
+      <article class="paper">
+        <h3 class="paper-title">
+          Default on Debt Payment and Loss of Formal Employment in Peru
+        </h3>
+        <p class="paper-meta">
+          <span class="journal">SBS Peru Working Paper Series</span>
+        </p>
+        <details>
+          <summary>Abstract</summary>
+          <div class="paper-abstract">
+            Using individual-level administrative data on income and debt, I
+            quantify the effect of losing formal employment on debt repayment.
+            Losing a formal job increases past-due days by 8.7 days per
+            quarter. The effect is largest among younger and lower-income
+            workers, consistent with these groups having weaker networks to
+            draw on after an income loss.
+          </div>
+        </details>
+        <div class="paper-links">
+          <a href="https://www.sbs.gob.pe/Portals/0/jer/DDT_ANO2023/DT%2001%202023.pdf" target="_blank" rel="noopener">PDF</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <h3 class="paper-title">
+          Liquidity Management in a Bi-Monetary Banking System
+        </h3>
+        <p class="paper-meta">
+          CEMFI M.Sc. thesis (advisor: Nezih Guner) ·
+          <span class="journal">SBS Peru Working Paper Series</span>
+        </p>
+        <details>
+          <summary>Abstract</summary>
+          <div class="paper-abstract">
+            Liquidity model of a bi-monetary banking system in which banks
+            manage idiosyncratic liquidity shocks through the interbank and
+            FX-swap markets. Banks demand dollars because holding them gives
+            access to an additional source of liquidity, the FX-swap market.
+            U.S. monetary policy affects domestic lending by changing the
+            return on foreign-currency reserves, and an exogenous decline in
+            interbank matching efficiency leads banks to replace domestic loans
+            with foreign-currency reserves.
+          </div>
+        </details>
+        <p class="paper-meta paper-presented">
+          <strong>Presented at:</strong>
+          Asociación Peruana de Economía Annual Meeting (2019) · Central
+          Reserve Bank of Peru Annual Meeting (2019)
+        </p>
+        <div class="paper-links">
+          <a href="https://www.sbs.gob.pe/Portals/0/jer/DDT_ANO2018/DT-003-2018(eng).pdf" target="_blank" rel="noopener">PDF</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <h3 class="paper-title">
+          Liquidity Management in a Totally Dollarized Economy
+        </h3>
+        <p class="paper-meta">
+          Universidad del Pacífico M.Sc. thesis (advisor: Saki Bigio) ·
+          <span class="journal">SBS Peru Working Paper Series</span>
+        </p>
+        <details>
+          <summary>Abstract</summary>
+          <div class="paper-abstract">
+            Banking liquidity model for a fully dollarized economy without a
+            lender of last resort. The central bank's limited capacity to
+            supply foreign-currency liquidity constrains credit provision and,
+            in the limit, can lead banks to adopt narrow banking.
+          </div>
+        </details>
+        <div class="paper-links">
+          <a href="https://www.sbs.gob.pe/Portals/0/jer/DDT_ANO2019/DDT-004-2019.pdf" target="_blank" rel="noopener">PDF</a>
+        </div>
+      </article>
+    </section>
+    </section>
+
+    <section class="home-section" id="teaching">
+      <div class="home-section-header">
+        <h2>Teaching</h2>
+        <p class="lede">
+        I have taught macroeconomics and monetary economics at the undergraduate
+        and graduate levels at the University of Michigan and Universidad del
+        Pacífico (Lima).
+        </p>
+      </div>
+
+    <section class="block">
+      <h2 class="section-label">University of Michigan</h2>
+      <div class="course">
+        <div>
+          <div class="course-code">GSI</div>
+          <div class="course-term">2026</div>
+        </div>
+        <div>
+          <div class="course-title">Intermediate Macroeconomic Theory</div>
+          <p class="course-detail">Instructors: Rüdiger Bachmann (Fall) and Javier Cravino (Winter).</p>
+        </div>
+      </div>
+      <div class="course">
+        <div>
+          <div class="course-code">GSI</div>
+          <div class="course-term">2024–2025</div>
+        </div>
+        <div>
+          <div class="course-title">Money and Banking</div>
+          <p class="course-detail">Instructor: Maciej Dudek.</p>
         </div>
       </div>
     </section>
 
     <section class="block">
-      <h2 class="section-label">News</h2>
-      <ul class="news-list">
-        <li class="news-item">
-          <span class="news-date">2025</span>
-          <span class="news-text">
-            Drafting third-year paper, <em>“Dollarization Hysteresis and
-            Expectation Formation,”</em> on experience-based learning and
-            deposit dollarization in Uruguay.
-          </span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">2024–25</span>
-          <span class="news-text">
-            GSI for Money and Banking, University of Michigan.
-          </span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">2023</span>
-          <span class="news-text">
-            Awarded an ASBANC research grant (US$15,000) for joint work with
-            Marco Ortiz on optimal FX intervention.
-          </span>
-        </li>
-      </ul>
+      <h2 class="section-label">Universidad del Pacífico — Lecturer</h2>
+      <div class="course">
+        <div>
+          <div class="course-code">Lecturer</div>
+          <div class="course-term">2021</div>
+        </div>
+        <div>
+          <div class="course-title">Monetary Theory</div>
+          <p class="course-detail">Department of Economics.</p>
+        </div>
+      </div>
+      <div class="course">
+        <div>
+          <div class="course-code">Lecturer</div>
+          <div class="course-term">2016</div>
+        </div>
+        <div>
+          <div class="course-title">Introduction to Macroeconomics</div>
+          <p class="course-detail">Department of Economics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-label">Universidad del Pacífico — Teaching Assistant (Graduate School)</h2>
+      <div class="course">
+        <div>
+          <div class="course-code">TA</div>
+          <div class="course-term">2013, 2014, 2019, 2020</div>
+        </div>
+        <div>
+          <div class="course-title">Advanced Macroeconomics I</div>
+        </div>
+      </div>
+      <div class="course">
+        <div>
+          <div class="course-code">TA</div>
+          <div class="course-term">2016</div>
+        </div>
+        <div>
+          <div class="course-title">Advanced Macroeconomics II</div>
+        </div>
+      </div>
+      <div class="course">
+        <div>
+          <div class="course-code">TA</div>
+          <div class="course-term">2014</div>
+        </div>
+        <div>
+          <div class="course-title">Advanced Microeconomics II</div>
+        </div>
+      </div>
+      <div class="course">
+        <div>
+          <div class="course-code">TA</div>
+          <div class="course-term">2019</div>
+        </div>
+        <div>
+          <div class="course-title">Advanced Econometrics I</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-label">Universidad del Pacífico — Teaching Assistant (Undergraduate)</h2>
+      <div class="course">
+        <div>
+          <div class="course-code">TA</div>
+          <div class="course-term">2014, 2015</div>
+        </div>
+        <div>
+          <div class="course-title">Macroeconomics II</div>
+        </div>
+      </div>
+      <div class="course">
+        <div>
+          <div class="course-code">TA</div>
+          <div class="course-term">2011, 2012</div>
+        </div>
+        <div>
+          <div class="course-title">Macroeconomics I</div>
+        </div>
+      </div>
+      <div class="course">
+        <div>
+          <div class="course-code">TA</div>
+          <div class="course-term">2014</div>
+        </div>
+        <div>
+          <div class="course-title">Econometrics II</div>
+        </div>
+      </div>
+      <div class="course">
+        <div>
+          <div class="course-code">TA</div>
+          <div class="course-term">2014</div>
+        </div>
+        <div>
+          <div class="course-title">Mathematics IV</div>
+        </div>
+      </div>
+      <div class="course">
+        <div>
+          <div class="course-code">TA</div>
+          <div class="course-term">2012</div>
+        </div>
+        <div>
+          <div class="course-title">Introduction to Microeconomics</div>
+        </div>
+      </div>
+    </section>
     </section>
 
   </main>
@@ -111,6 +451,25 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    // Highlight the menu item for the section currently on screen.
+    (function () {
+      var links = document.querySelectorAll('.nav-links a[data-section]');
+      var sections = ['about', 'research', 'teaching']
+        .map(function (id) { return document.getElementById(id); })
+        .filter(Boolean);
+      if (!('IntersectionObserver' in window) || !sections.length) return;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          links.forEach(function (a) {
+            a.classList.toggle('active', a.dataset.section === e.target.id);
+          });
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      sections.forEach(function (s) { observer.observe(s); });
+    })();
   </script>
 </body>
 </html>

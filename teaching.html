@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teaching — Adrian Armas Braithwaite</title>
+  <meta name="description" content="Personal website of Adrian Armas Braithwaite, PhD Candidate in Economics at the University of Michigan. Macroeconomics and International Finance.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,10 +14,10 @@
       <nav>
         <a href="index.html" class="site-title">Adrian Armas Braithwaite</a>
         <ul class="nav-links">
-          <li><a href="index.html">About</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="teaching.html" class="active">Teaching</a></li>
-          <li><a href="cv.html">CV</a></li>
+          <li><a href="index.html#about" data-section="about">About</a></li>
+          <li><a href="index.html#research" data-section="research">Research</a></li>
+          <li><a href="index.html#teaching" class="active" data-section="teaching">Teaching</a></li>
+          <li><a href="cv.html" data-section="cv">CV</a></li>
         </ul>
       </nav>
     </div>
@@ -27,16 +28,24 @@
     <div class="page-header">
       <h1>Teaching</h1>
       <p class="lede">
-        I have taught macroeconomics and monetary economics at the
-        undergraduate and graduate levels at the University of Michigan and
-        Universidad del Pacífico (Lima).
+        I have taught macroeconomics and monetary economics at the undergraduate
+        and graduate levels at the University of Michigan and Universidad del
+        Pacífico (Lima).
       </p>
     </div>
 
-    <!-- =====================  MICHIGAN  ===================== -->
     <section class="block">
       <h2 class="section-label">University of Michigan</h2>
-
+      <div class="course">
+        <div>
+          <div class="course-code">GSI</div>
+          <div class="course-term">2026</div>
+        </div>
+        <div>
+          <div class="course-title">Intermediate Macroeconomic Theory</div>
+          <p class="course-detail">Instructors: Rüdiger Bachmann (Fall) and Javier Cravino (Winter).</p>
+        </div>
+      </div>
       <div class="course">
         <div>
           <div class="course-code">GSI</div>
@@ -44,17 +53,13 @@
         </div>
         <div>
           <div class="course-title">Money and Banking</div>
-          <p class="course-detail">
-            Graduate Student Instructor, Department of Economics.
-          </p>
+          <p class="course-detail">Instructor: Maciej Dudek.</p>
         </div>
       </div>
     </section>
 
-    <!-- =====================  UP — LECTURER  ===================== -->
     <section class="block">
       <h2 class="section-label">Universidad del Pacífico — Lecturer</h2>
-
       <div class="course">
         <div>
           <div class="course-code">Lecturer</div>
@@ -62,12 +67,9 @@
         </div>
         <div>
           <div class="course-title">Monetary Theory</div>
-          <p class="course-detail">
-            Department of Economics.
-          </p>
+          <p class="course-detail">Department of Economics.</p>
         </div>
       </div>
-
       <div class="course">
         <div>
           <div class="course-code">Lecturer</div>
@@ -75,17 +77,13 @@
         </div>
         <div>
           <div class="course-title">Introduction to Macroeconomics</div>
-          <p class="course-detail">
-            Department of Economics.
-          </p>
+          <p class="course-detail">Department of Economics.</p>
         </div>
       </div>
     </section>
 
-    <!-- =====================  UP — TA (GRAD)  ===================== -->
     <section class="block">
       <h2 class="section-label">Universidad del Pacífico — Teaching Assistant (Graduate School)</h2>
-
       <div class="course">
         <div>
           <div class="course-code">TA</div>
@@ -95,7 +93,6 @@
           <div class="course-title">Advanced Macroeconomics I</div>
         </div>
       </div>
-
       <div class="course">
         <div>
           <div class="course-code">TA</div>
@@ -105,7 +102,6 @@
           <div class="course-title">Advanced Macroeconomics II</div>
         </div>
       </div>
-
       <div class="course">
         <div>
           <div class="course-code">TA</div>
@@ -115,7 +111,6 @@
           <div class="course-title">Advanced Microeconomics II</div>
         </div>
       </div>
-
       <div class="course">
         <div>
           <div class="course-code">TA</div>
@@ -127,10 +122,8 @@
       </div>
     </section>
 
-    <!-- =====================  UP — TA (UNDERGRAD)  ===================== -->
     <section class="block">
       <h2 class="section-label">Universidad del Pacífico — Teaching Assistant (Undergraduate)</h2>
-
       <div class="course">
         <div>
           <div class="course-code">TA</div>
@@ -140,7 +133,6 @@
           <div class="course-title">Macroeconomics II</div>
         </div>
       </div>
-
       <div class="course">
         <div>
           <div class="course-code">TA</div>
@@ -150,7 +142,6 @@
           <div class="course-title">Macroeconomics I</div>
         </div>
       </div>
-
       <div class="course">
         <div>
           <div class="course-code">TA</div>
@@ -160,7 +151,6 @@
           <div class="course-title">Econometrics II</div>
         </div>
       </div>
-
       <div class="course">
         <div>
           <div class="course-code">TA</div>
@@ -170,7 +160,6 @@
           <div class="course-title">Mathematics IV</div>
         </div>
       </div>
-
       <div class="course">
         <div>
           <div class="course-code">TA</div>
@@ -194,5 +183,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>

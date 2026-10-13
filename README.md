@@ -7,9 +7,9 @@ no JavaScript framework. Just two Google Fonts loaded from CDN.
 
 ```
 website/
-├── index.html      ← Home / About
-├── research.html   ← Working papers + earlier work
-├── teaching.html   ← Courses taught at Michigan and Universidad del Pacífico
+├── index.html      ← Home: About, Research and Teaching on one scrolling page
+├── research.html   ← Same research content as a standalone page (keeps old links working)
+├── teaching.html   ← Same teaching content as a standalone page (keeps old links working)
 ├── cv.html         ← Online CV
 ├── cv.pdf          ← Your CV PDF (already in place)
 ├── styles.css      ← All styling
@@ -59,8 +59,8 @@ Everything has been pre-filled from your CV:
 
    Drop the file in a `papers/` folder, uncomment the link, and you're done.
 
-4. **Refresh the news section** when something happens — presentations, new
-   drafts, awards. It's the most "alive" part of the site for visitors.
+4. **Research and teaching content** appears both on the home page and on
+   research.html / teaching.html. If you edit one by hand, edit the other too.
 
 ## Deploying to GitHub Pages
 

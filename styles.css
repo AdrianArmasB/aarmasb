@@ -540,3 +540,49 @@ footer a:hover { color: var(--accent); }
 
   .page-header { padding: 2rem 0 1.4rem; margin-bottom: 2rem; }
 }
+
+/* =====================  ONE-PAGE HOME: SCROLLING SECTIONS  ===================== */
+
+/* Keep section titles clear of the sticky header when jumping from the menu */
+section[id] { scroll-margin-top: 96px; }
+
+.home-section {
+  margin-top: 3.5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border);
+}
+
+.home-section:last-of-type { margin-bottom: 4rem; }
+
+.home-section-header { margin-bottom: 2.4rem; }
+
+.home-section-header h2 {
+  font-size: 2.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.home-section-header .lede {
+  color: var(--text-muted);
+  max-width: 720px;
+  font-size: 1.05rem;
+}
+
+.paper-presented { margin-top: 0.8rem; }
+.paper-presented strong { color: var(--text); font-weight: 600; }
+
+@media (max-width: 720px) {
+  section[id] { scroll-margin-top: 112px; }
+  .home-section { margin-top: 2.5rem; padding-top: 2.2rem; }
+  .home-section-header h2 { font-size: 1.7rem; }
+}
+
+.cv-subhead {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin: 1.4rem 0 0.4rem;
+}
+.cv-section .cv-subhead:first-of-type { margin-top: 0.2rem; }
